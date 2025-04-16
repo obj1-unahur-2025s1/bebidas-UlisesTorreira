@@ -1,0 +1,23 @@
+import tito.*
+
+describe "test de tito"{
+    
+    method initialize(){
+        tito.consumir(5,whisky)
+    }
+    method consumoTerere(){
+        tito.consumir(5, terere)
+    }
+    test"tito tiene peso 70"{
+        assert.equals(70, tito.peso())
+    }
+
+    test"la velocidad de tito es"{
+        assert.equals(0.9*5*490/70, tito.velocidad())    
+    }
+
+    test"ahora la velocidad es 7 poruqe consumis terere"{
+        self.consumoTerere()
+        assert.equals(7, tito.velocidad())
+    } 
+}
